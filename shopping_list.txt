@@ -2,4 +2,4 @@ leb x 2
 zejtin x 3 
 brasno x 7
 sol x 6
-kvasec x 4
+kvasec x 2

@@ -1,0 +1,90 @@
+4. -git clone https://github.com/darkoilov/SI_2022_lab1_172085.git
+// Правиме локална копија од гит ремоте репозиториумот
+
+5. -git add shopping_list.txt // додаваме нов документ во директориумот
+   -git commit -m "Add 5 items to the shopping list" // ги комитираме/зачувуваме промените со соодветна порака
+
+6. -git commit -am "Add quantities to the items."  // ги додаваме и комитираме/зачувуваме промените со соодветна порака
+
+7. -git branch branch1
+   -git branch branch2
+// креираме гранки branch1 и branch2
+
+8. -1 file changed, 5 insertions(+)
+   create mode 100644 shopping_list.txt
+
+   -[master f61dc88] Add quantities to the items.
+   1 file changed, 5 insertions(+), 5 deletions(-)
+
+9. -git push --all origin 
+// За синхронизација исто може и со fetch -all
+// Ги праќаме сите комити од локалните гранки на ремоте репозиториум
+
+10. -git checkout branch1  // Се враќаме на гранката branch1
+ 
+11. -git add .  // додаваме се што се нови/изменети документи во директориумот
+    -git commit -m "Change quantity of item #5"   // ги комитираме/зачувуваме промените со соодветна порака
+
+12. -git checkout master  // Се враќаме на гранката master
+
+13. -git add .    // додаваме се што се нови/изменети документи во директориумот
+    -git commit -m "Change quantity of item #2"   // ги комитираме/зачувуваме промените со соодветна поракa
+
+
+14. -git push --all origin // Ги праќаме сите комити од локалните гранки на ремоте репозиториум
+/ git fetch --all
+
+15. -git checkout branch2   // Се враќаме на гранката branch2
+
+
+16. -git add .   // додаваме се што се нови/изменети документи во директориумот
+    -git commit -m "Modify item #4"    // ги комитираме/зачувуваме промените со соодветна поракa
+
+
+17. - Fetching origin   
+
+- Switched to branch 'branch1'
+
+- [branch1 579665b] Change quantity of item #5
+  1 file changed, 1 insertion(+), 1 deletion(-)
+
+- Switched to branch 'master'
+  Your branch is up to date with 'origin/master'.
+
+-[master 63ed13b] Change quantity of item #2
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+- Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 563 bytes | 563.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/darkoilov/test.git
+   4d31f4a..7b1dbdc  branch1 -> branch1
+   4d31f4a..63ed13b  master -> master
+
+- Switched to branch 'branch2'
+
+- [branch2 c47490f] Modify item #4
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+18. git commit --amend -m "Modify item #4 and add item #6"   // Со amend го препокриваме последниот комит
+
+19.[branch2 caab83a] Modify item #4 and add item #6
+ Date: Sun Apr 10 02:18:58 2022 +0200
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+20. -git checkout master    // Се враќаме на гранката master
+    -git merge branch1      // Гранката branch1 ја спојуваме со master
+
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+
+21. -git merge branch2   // Гранката branch2 ја спојуваме со master
+  Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+//Ние одлучуваме која промена ќе ја прифаниме, рачно го решаваме конфликтот
+

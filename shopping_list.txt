@@ -1,5 +1,6 @@
 leb x 2
-zejtin x 6 
+sok x 6 
 brasno x 7
 sol x 6
 kvasec x 2
+cokolado x 3
